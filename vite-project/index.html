@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>Your ID: <span id="peer-id"></span></h3>
+      <video id="localStream" width="400" controls></video>
+      <br />
+      <video id="remoteStream" width="400" controls></video>
+      <br />
+<!--      <input type="text" placeholder="enter username" id="txtUsername"/>-->
+<!--      <button id="btnSignup">Sign Up</button>-->
+      <input type="text" placeholder="enter remote id" id="remote-id"/>
+      <button id="btnCall">Call</button>
+    </div>
+  </body>
+  <script>
+    var parcelRequire;
+    // const video1 = document.getElementById("remoteStream");
+    // const video2 = document.getElementById("localStream");
+    //
+    // var playPromise1 = video1.play();
+    // var playPromise2 = video2.play();
+    // if (playPromise1 !== undefined) {
+    //     playPromise1.then(_ => {
+    //       // Automatic playback started!
+    //       // Show playing UI.
+    //       // We can now safely pause video...
+    //       video1.pause();
+    //     })
+    //     .catch(error => {
+    //       // Auto-play was prevented
+    //       // Show paused UI.
+    //     });
+    // }
+    //
+    // if (playPromise2 !== undefined) {
+    //     playPromise2.then(_ => {
+    //       // Automatic playback started!
+    //       // Show playing UI.
+    //       // We can now safely pause video...
+    //       video2.pause();
+    //     })
+    //     .catch(error => {
+    //       // Auto-play was prevented
+    //       // Show paused UI.
+    //     });
+    // }
+  </script>
+  <script type="module" src="main.js"></script>
+</html>
