@@ -8,15 +8,23 @@
   </head>
   <body>
     <div id="app">
-      <h3>Your ID: <span id="peer-id"></span></h3>
-      <video id="localStream" width="400" controls></video>
-      <br />
-      <video id="remoteStream" width="400" controls></video>
-      <br />
-<!--      <input type="text" placeholder="enter username" id="txtUsername"/>-->
-<!--      <button id="btnSignup">Sign Up</button>-->
-      <input type="text" placeholder="enter remote id" id="remote-id"/>
-      <button id="btnCall">Call</button>
+      <div id="sign-up">
+        <input type="text" placeholder="enter username" id="txtUsername"/>
+        <button id="btnSignup">Sign Up</button>
+      </div>
+      <div id="video-chat">
+        <h3>Online users:</h3>
+        <ul id="userList">
+        </ul>
+        <h3>Your ID: <span id="peer-id"></span></h3>
+        <video id="localStream" width="400" controls></video>
+        <br />
+        <video id="remoteStream" width="400" controls></video>
+        <br />
+
+        <input type="text" placeholder="enter remote id" id="remote-id"/>
+        <button id="btnCall">Call</button>
+      </div>
     </div>
   </body>
   <script>
