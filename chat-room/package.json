@@ -1,0 +1,18 @@
+{
+  "name": "chat-room",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.0"
+  },
+  "dependencies": {
+    "agora-rtc-sdk-ng": "latest",
+    "jquery": "^3.6.0",
+    "socket.io-client": "^4.4.1"
+  }
+}
