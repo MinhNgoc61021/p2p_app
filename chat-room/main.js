@@ -1,5 +1,5 @@
 import './style.css'
-import AgoraRTC from "agora-rtc-sdk-ng";
+// import AgoraRTC from "agora-rtc-sdk-ng";
 import $ from 'jquery';
 
 // document.querySelector('#app').innerHTML = `
@@ -30,11 +30,9 @@ let joinAndDisplayLocalStream = async () => {
 }
 
 let handleUserJoined = async (user, mediaType) => {
-
+    console.log(mediaType);
     remoteUsers[user.uid] = user;
     await client.subscribe(user, mediaType);
-    console.log('bebe2')
-    console.log(mediaType)
     if (mediaType === 'video'){
         let player = document.getElementById(`user-container-${user.uid}`)
         if (player != null){
@@ -43,11 +41,12 @@ let handleUserJoined = async (user, mediaType) => {
 
         player = `<div class="video-container" id="user-container-${user.uid}">
                           <div class="video-player" id="user-${user.uid}"></div> 
-                  </div>`
+                  </div>`;
         console.log('bebe3')
         document.getElementById('video-streams').insertAdjacentHTML('beforeend', player)
         console.log(document.getElementById('video-streams'))
-        user.videoTrack.play(`user-${user.uid}`)
+
+        user.videoTrack.play(`user-${user.uid}`);
     }
     if (mediaType === 'audio'){
         user.audioTrack.play();

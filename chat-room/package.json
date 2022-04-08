@@ -11,7 +11,6 @@
     "vite": "^2.9.0"
   },
   "dependencies": {
-    "agora-rtc-sdk-ng": "latest",
     "jquery": "^3.6.0",
     "socket.io-client": "^4.4.1"
   }
