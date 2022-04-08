@@ -35,19 +35,20 @@ let handleUserJoined = async (user, mediaType) => {
     await client.subscribe(user, mediaType);
     console.log('bebe2')
     console.log(mediaType)
-    let player = document.getElementById(`user-container-${user.uid}`)
-    if (player != null){
-        player.remove()
+    if (mediaType === 'video'){
+        let player = document.getElementById(`user-container-${user.uid}`)
+        if (player != null){
+            player.remove()
+        }
+
+        player = `<div class="video-container" id="user-container-${user.uid}">
+                          <div class="video-player" id="user-${user.uid}"></div> 
+                  </div>`
+        console.log('bebe3')
+        document.getElementById('video-streams').insertAdjacentHTML('beforeend', player)
+        console.log(document.getElementById('video-streams'))
+        user.videoTrack.play(`user-${user.uid}`)
     }
-
-    player = `<div class="video-container" id="user-container-${user.uid}">
-                      <div class="video-player" id="user-${user.uid}"></div> 
-              </div>`
-    console.log('bebe3')
-    document.getElementById('video-streams').insertAdjacentHTML('beforeend', player)
-    console.log(document.getElementById('video-streams'))
-    user.videoTrack.play(`user-${user.uid}`)
-
     if (mediaType === 'audio'){
         user.audioTrack.play();
     }
