@@ -7,7 +7,7 @@ import $ from 'jquery';
 // `
 
 const APP_ID = "0ce7bea6b88845d5a73590e948879343";
-const TOKEN = "0060ce7bea6b88845d5a73590e948879343IACzpRXv7vyuu1Wg1+0060ce7bea6b88845d5a73590e948879343IACCN5z7nyyYGrfnotbeQcpCKpY4RMgVUahxoiYOg5l1z2TNKL8AAAAAEAAFO07nCTBRYgEAAQALMFFi";
+const TOKEN = "0060ce7bea6b88845d5a73590e948879343IACCN5z7nyyYGrfnotbeQcpCKpY4RMgVUahxoiYOg5l1z2TNKL8AAAAAEAAFO07nCTBRYgEAAQALMFFi";
 const Channel = 'main';
 const client = AgoraRTC.createClient({mode: 'rtc', codec: 'vp8'})
 
